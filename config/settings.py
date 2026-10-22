@@ -139,3 +139,8 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# Where Django sends users for login/logout (URL names come from accounts and trips)
+LOGIN_URL = "accounts:login"
+LOGIN_REDIRECT_URL = "trips:list"
+LOGOUT_REDIRECT_URL = "accounts:login"
